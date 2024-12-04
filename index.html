@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RASH - Resume</title>
+    <title>Rashmitha Padmashetti Portfolio</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <style>
@@ -27,8 +27,6 @@
             background-color: var(--bg);
             color: var(--text);
             line-height: 1.6;
-            overflow-x: hidden;
-            position: relative;
         }
 
         .container {
@@ -37,30 +35,50 @@
             padding: 0 20px;
         }
 
-        
+        /* Navbar Styles */
+        nav {
+            background: var(--primary);
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-        /* Header Styles */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+
         header {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
             padding: 100px 0 50px;
             text-align: center;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-            z-index: 1;
         }
 
         .profile-info h1 {
             font-size: 3em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-
-        .contact-info {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
         }
 
         /* Section Styles */
@@ -74,9 +92,6 @@
             color: var(--primary);
             font-size: 2.5em;
             position: relative;
-            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background for better visibility */
-            padding: 10px;
-            border-radius: 10px;
         }
 
         .section-title::after {
@@ -93,7 +108,6 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
-            margin-top: 40px;
         }
 
         .skill-category {
@@ -101,290 +115,119 @@
             padding: 25px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-5px);
-        }
-
-        .skill-category h3 {
-            color: var(--secondary);
-            margin-bottom: 15px;
-            border-bottom: 2px solid var(--secondary);
-            padding-bottom: 10px;
-        }
-
-        /* Experience Cards */
-        .experience-card {
-            background: var(--card-bg);
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .experience-card::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 4px;
-            background: var(--secondary);
-        }
-
-        .experience-card h3 {
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-
-        .experience-card h4 {
-            color: var(--secondary);
-            margin-bottom: 15px;
-        }
-
-        /* Education Section */
-        .education-card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-        }
-
-        .education-card h3 {
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-
-        /* Activities Section */
-        .activities-card {
-            background: var(--card-bg);
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-            border-left: 4px solid var(--accent);
-        }
-
-        /* Matrix Rain Effect */
-        #matrix-rain {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.2); /* Semi-transparent background for the rain */
-            z-index: -1; /* Put behind the content */
-            pointer-events: none;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .profile-info h1 {
-                font-size: 2em;
-            }
-
-            .section-title {
-                font-size: 2em;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
             }
         }
     </style>
-  
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Rashmitha Padmashetti</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Work Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
 
-    <!-- Matrix Rain Canvas -->
-    <canvas id="matrix-rain"></canvas>
-
-    <!-- Main Resume Content -->
-    <header>
+    <!-- Header -->
+    <header id="home">
         <div class="container">
             <div class="profile-info">
                 <h1 data-aos="fade-down"> Rashmitha Padmashetti</h1>
-                <div class="contact-info" data-aos="fade-up">
-                    <p>📍 Kent, Ohio</p>
-                    <p>📞 +1 (234) 296-2703</p>
-                    <p>✉️ priyadharsanjayaseelan@gmail.com</p>
-                </div>
+                <p>📍 Kent, Ohio</p>
+                <p>📞 +1 (330) 552-4975</p>
+                <p>✉️ rashmithapadmashetti1819@gmail.com</p>
             </div>
         </div>
     </header>
 
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Skills & Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
-                    <h3>Programming Languages</h3>
-                    <div class="skill-item">
-                        <p>C++</p>
-                        <div class="skill-progress">
-                            <div class="progress-bar" data-width="90"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <p>Python</p>
-                        <div class="skill-progress">
-                            <div class="progress-bar" data-width="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <p>SQL</p>
-                        <div class="skill-progress">
-                            <div class="progress-bar" data-width="80"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Development Tools</h3>
-                    <ul>
-                        <li>VS Code</li>
-                        <li>Xcode</li>
-                        <li>Python IDLE</li>
-                        <li>MySQL Workbench</li>
-                    </ul>
-                </div>
-
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
-                    <h3>Technical Skills</h3>
-                    <ul>
-                        <li>Database Management</li>
-                        <li>Inventory System Operations</li>
-                        <li>Data Analysis</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Work Experience</h2>
-            
-            <div class="experience-card" data-aos="fade-up">
-                <h3>Culinary Operational Assistant</h3>
-                <h4>Kent State University | Aug 2024 - Present</h4>
-                <ul>
-                    <li>Optimized staff scheduling using SQL queries</li>
-                    <li>Developed custom data structures for inventory management</li>
-                    <li>Improved operational efficiency by 20%</li>
-                </ul>
-            </div>
-
-            <div class="experience-card" data-aos="fade-up" data-aos-delay="100">
-                <h3>Technical Lab Support Assistant</h3>
-                <h4>Aristo Public School | Aug 2022 - Feb 2023</h4>
-                <ul>
-                    <li>Provided technical support and troubleshooting</li>
-                    <li>Streamlined lab operations</li>
-                    <li>Organized coding activities and group projects</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
+    <!-- Education Section -->
     <section id="education">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Education</h2>
-            
-            <div class="education-card" data-aos="fade-up">
+            <h2 class="section-title">Education</h2>
+            <div>
+                <h3>Master of Computer Science</h3>
+                <p>Kent State University, GPA: 3.7/4.0 (Aug 2023 - May 2025)</p>
                 <h3>Bachelor of Computer Science</h3>
-                <h4>Kent State University | GPA: 3.77 | Aug 2023 - May 2027</h4>
-                <p>Relevant Coursework:</p>
+                <p>Sathyabama Institute of Science and Technology, GPA: 9.32/10.0 (Aug 2019 - May 2023)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>C</li>
+                        <li>Java</li>
+                        <li>HTML & CSS</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Data Science Skills</h3>
+                    <ul>
+                        <li>Data Visualization</li>
+                        <li>EDA</li>
+                        <li>Predictive Modeling</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks</h3>
+                    <ul>
+                        <li>Flask</li>
+                        <li>Django</li>
+                        <li>TensorFlow</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div>
+                <h3>Machine Learning Intern</h3>
+                <p>HCL, Jan 2022 - May 2022</p>
                 <ul>
-                    <li>Advanced C++ Projects</li>
-                    <li>Data Structures & Algorithms</li>
-                    <li>Object-Oriented Programming</li>
-                    <li>Database Operations</li>
+                    <li>Developed a Crop Yield Prediction Tool.</li>
+                    <li>Streamlined agricultural dataset management.</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <section id="activities">
+    <!-- Projects Section -->
+    <section id="projects">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Activities</h2>
-            
-            <div class="activities-card" data-aos="fade-up">
-                <h3>ALD Honor Society Member</h3>
-                <h4>Kent State University | Dec 2023 - Present</h4>
-                <ul>
-                    <li>Led bi-monthly mentoring initiatives</li>
-                    <li>Increased Honor Society participation by 30%</li>
-                    <li>Spearheaded faculty-student engagement programs</li>
-                </ul>
+            <h2 class="section-title">Projects</h2>
+            <div>
+                <h3>Air Quality Prediction</h3>
+                <p>Explored ML algorithms for air quality monitoring.</p>
+                <h3>Customer Behavior Analysis</h3>
+                <p>Improved spend prediction using advanced ML techniques.</p>
             </div>
         </div>
     </section>
 
     <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            offset: 100,
-            once: true
-        });
-
-        // Matrix Rain Effect
-        const canvas = document.getElementById('matrix-rain');
-        const ctx = canvas.getContext('2d');
-        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@$%&*#^!';
-        const fontSize = 16;
-
-        // Set the canvas to cover the screen
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        // Create an array of drops
-        const drops = [];
-        for (let i = 0; i < canvas.width / fontSize; i++) {
-            drops[i] = Math.random() * canvas.height;
-        }
-
-        // Draw the rain
-        function drawMatrixRain() {
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'; 
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            ctx.fillStyle = '#0F0'; 
-            ctx.font = `${fontSize}px monospace`;
-
-            for (let i = 0; i < drops.length; i++) {
-                const text = characters[Math.floor(Math.random() * characters.length)];
-                ctx.fillText(text, i * fontSize, drops[i]);
-
-                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                    drops[i] = 0;
-                }
-
-                drops[i] += fontSize;
-            }
-        }
-
-        setInterval(drawMatrixRain, 35);
-
-        // Ensure canvas size is correct on window resize
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            drops.length = 0;
-            for (let i = 0; i < canvas.width / fontSize; i++) {
-                drops[i] = Math.random() * canvas.height;
-            }
-        });
-
-        // Hide the loader after the page is fully loaded
-        window.onload = () => {
-            document.getElementById('techie-loader').style.display = 'none';
-        };
+        AOS.init({ duration: 800, offset: 100 });
     </script>
 </body>
 </html>
- 
