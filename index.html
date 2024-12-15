@@ -6,6 +6,7 @@
     <title>Rashmitha Padmashetti Portfolio</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         :root {
             --primary: #34495e;
@@ -13,7 +14,7 @@
             --accent: #e74c3c;
             --text-dark: #2c3e50;
             --text-light: #ecf0f1;
-            --bg-light: #f4f4f4;
+            --bg-light: #eafaf1;
             --bg-dark: #2c3e50;
         }
 
@@ -76,9 +77,21 @@
             margin-bottom: 10px;
         }
 
-        header p {
-            font-size: 1rem;
-            margin: 5px 0;
+        header .contact-icons {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        header .contact-icons a {
+            color: var(--text-light);
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        header .contact-icons a:hover {
+            color: var(--accent);
         }
 
         section {
@@ -149,7 +162,7 @@
     </nav>
 
     <!-- Header -->
-   <header id="about">
+    <header id="about">
         <h1 data-aos="fade-down">Hello, I'm Rashmitha Padmashetti</h1>
         <div class="contact-icons" data-aos="fade-up">
             <a href="tel:+13305524975" title="Call"><i class="fas fa-phone"></i></a>
