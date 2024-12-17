@@ -10,12 +10,12 @@
     <style>
         /* Root Colors */
         :root {
-            --primary: #2C3E50; /* Dark Blue */
-            --secondary: #1ABC9C; /* Teal */
-            --text-light: #ECF0F1; /* Light Grayish White */
-            --bg-light: #F7F9FB; /* Light Gray */
-            --bg-dark: #34495E; /* Dark Gray */
-            --hover-color: #16A085; /* Brighter Teal */
+            --primary: #2c3e50;
+            --secondary: #1abc9c;
+            --text-light: #ecf0f1;
+            --text-dark: #333333;
+            --bg-light: #f4f4f4;
+            --bg-dark: #34495e;
         }
 
         /* Global Reset */
@@ -24,12 +24,12 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth;
         }
 
         body {
             background-color: var(--bg-light);
-            color: var(--primary);
-            line-height: 1.6;
+            color: var(--text-dark);
         }
 
         /* Navbar */
@@ -39,7 +39,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 50px;
+            padding: 10px 40px;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -48,58 +48,59 @@
         nav .logo {
             font-size: 1.5rem;
             font-weight: bold;
-            color: var(--text-light);
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            gap: 30px;
+            gap: 20px;
         }
 
         nav ul li a {
             color: var(--text-light);
             text-decoration: none;
             font-size: 1rem;
-            font-weight: 500;
             transition: color 0.3s;
         }
 
         nav ul li a:hover {
-            color: var(--hover-color);
+            color: var(--secondary);
         }
 
         /* Header Section */
         header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: var(--text-light);
-            text-align: center;
             height: 100vh;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            text-align: center;
+            color: var(--text-light);
             padding: 20px;
         }
 
+        header img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid var(--text-light);
+            margin-bottom: 20px;
+        }
+
         header h1 {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             margin-bottom: 10px;
         }
 
         header p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
+            font-size: 1.1rem;
             max-width: 600px;
             line-height: 1.5;
         }
 
-        header .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 4px solid var(--hover-color);
-            margin-bottom: 20px;
+        .contact-icons {
+            margin-top: 15px;
         }
 
         .contact-icons a {
@@ -110,53 +111,41 @@
         }
 
         .contact-icons a:hover {
-            color: var(--hover-color);
+            color: var(--secondary);
         }
 
-        /* Section Styling */
+        /* Sections */
         section {
             padding: 60px 20px;
-            background-color: var(--bg-light);
+            text-align: center;
         }
 
         .section-title {
-            text-align: center;
             font-size: 2.2rem;
-            color: var(--primary);
             margin-bottom: 40px;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 3px;
-            background: var(--secondary);
-            margin: 10px auto;
+            color: var(--primary);
         }
 
         .card {
-            background: var(--bg-dark);
-            border-radius: 8px;
+            background: var(--text-light);
             padding: 20px;
-            color: var(--text-light);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
-            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 600px;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .card:hover {
             transform: translateY(-5px);
-            background: var(--primary);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
         }
 
-        /* Footer */
         footer {
-            text-align: center;
             background: var(--primary);
             color: var(--text-light);
+            text-align: center;
             padding: 15px;
-            margin-top: 40px;
         }
     </style>
 </head>
@@ -175,9 +164,9 @@
 
     <!-- Header Section -->
     <header id="about">
-        <img src="C:\Users\saikr\Downloads\Profile.JPG" alt="Profile Picture" class="profile-img" />
+        <img src="C:\Users\saikr\Downloads\Profile.JPG" alt="Profile Picture" />
         <h1>Rashmitha Padmashetti</h1>
-        <p>Passionate Data Analyst & Machine Learning Enthusiast transforming complex data into actionable insights for smarter decisions.</p>
+        <p>Data Analyst & Machine Learning Enthusiast turning data into impactful insights for informed decisions.</p>
         <div class="contact-icons">
             <a href="tel:+13305524975" title="Call"><i class="fas fa-phone"></i></a>
             <a href="mailto:rashmithapadmashetti1819@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
@@ -189,11 +178,11 @@
     <!-- Education Section -->
     <section id="education">
         <h2 class="section-title">Education</h2>
-        <div class="card" data-aos="fade-right">
+        <div class="card">
             <h3>Master of Computer Science</h3>
             <p>Kent State University | GPA: 3.7/4.0</p>
         </div>
-        <div class="card" data-aos="fade-left">
+        <div class="card">
             <h3>Bachelor of Computer Science</h3>
             <p>Sathyabama Institute of Science and Technology | GPA: 9.32/10.0</p>
         </div>
@@ -205,10 +194,7 @@
     </footer>
 
     <script>
-        AOS.init({
-            duration: 800,
-            offset: 100,
-        });
+        AOS.init({ duration: 800, offset: 100 });
     </script>
 </body>
 </html>
