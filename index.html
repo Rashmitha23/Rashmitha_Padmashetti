@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         :root {
-            --primary: #0E1D4D; /* Dark Blue */
+            --primary: #000033; /* Dark Navy Blue */
             --secondary: #F0B32C; /* Yellow */
-            --accent: #4F6D7A; /* Light Blue */
+            --accent: #000033; /* Teal replaced with Dark Navy Blue */
             --text-light: #FFFFFF; /* White */
-            --bg-light: #F5F5F5; /* Light Background */
-            --bg-dark: #1D2733; /* Darker background */
+            --bg-light: #000033; /* Background Dark Navy Blue */
+            --bg-dark: #0A0A23; /* Slightly lighter dark */
         }
 
         * {
@@ -101,14 +101,7 @@
         }
 
         header .contact-icons a:hover {
-            color: var(--accent);
-        }
-
-        header .profile-img-container {
-            flex: 0.4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            color: var(--secondary);
         }
 
         header .profile-img-container img {
@@ -126,7 +119,7 @@
         .section-title {
             text-align: center;
             font-size: 2.5rem;
-            color: var(--primary);
+            color: var(--secondary);
             margin-bottom: 40px;
             position: relative;
         }
@@ -167,7 +160,6 @@
             padding: 20px;
             margin-top: 40px;
         }
-
     </style>
 </head>
 <body>
@@ -184,26 +176,22 @@
     </nav>
 
     <!-- Header -->
-   <!-- Header -->
-<header id="about" style="height: 100vh; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; background: linear-gradient(135deg, #2C3E50, #1ABC9C); color: #ECF0F1;">
-    <div style="flex: 1; text-align: left;" data-aos="fade-down">
-        <h1>Hello,</h1>
-        <h1>I'm Rashmitha Padmashetti</h1>
-        <p>I am a Passionate Data Analyst & Machine Learning Enthusiast. I transform complex data into meaningful insights that empower informed decision-making and inspire innovation. By harnessing the power of algorithms, I analyze trends and predict future outcomes, enabling smarter, data-driven decisions for impactful results.</p>
-        <div class="contact-icons" data-aos="fade-up">
-            <a href="tel:+13305524975" title="Call"><i class="fas fa-phone"></i></a>
-            <a href="mailto:rashmithapadmashetti1819@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/rashmithapadmashetti/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/Rashmitha23?tab=repositories" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    <header id="about">
+        <div>
+            <h1>Hello,</h1>
+            <h1>I'm Rashmitha Padmashetti</h1>
+            <p>I am a Passionate Data Analyst & Machine Learning Enthusiast. I transform complex data into meaningful insights that empower informed decision-making and inspire innovation.</p>
+            <div class="contact-icons">
+                <a href="tel:+13305524975"><i class="fas fa-phone"></i></a>
+                <a href="mailto:rashmithapadmashetti1819@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/rashmithapadmashetti/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Rashmitha23?tab=repositories" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
         </div>
-    </div>
-
-    <!-- Profile Picture -->
-    <div style="flex: 0.4; display: flex; justify-content: center; align-items: center;">
-        <img src="C:\Users\saikr\Downloads\Profile.JPG" alt="Rashmitha Padmashetti" style="width: 250px; height: 250px; border-radius: 50%; border: 5px solid #fff;">
-    </div>
-</header>
-
+        <div class="profile-img-container">
+            <img src="C:\Users\saikr\Downloads\Profile.JPG" alt="Rashmitha Padmashetti">
+        </div>
+    </header>
 <!-- Education Section -->
 <section id="education">
     <div class="container">
