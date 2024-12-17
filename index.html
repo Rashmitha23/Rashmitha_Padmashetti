@@ -4,75 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rashmitha Padmashetti Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* Root Colors */
         :root {
-            --primary: #0E1D4D; /* Dark Blue */
-            --secondary: #F0B32C; /* Yellow */
-            --accent: #4F6D7A; /* Light Blue */
-            --text-light: #FFFFFF; /* White */
-            --bg-light: #F5F5F5; /* Light Background */
-            --bg-dark: #1D2733; /* Darker background */
+            --primary: #2C3E50; /* Dark Blue */
+            --secondary: #1ABC9C; /* Teal */
+            --text-light: #ECF0F1; /* Light Grayish White */
+            --bg-light: #F7F9FB; /* Light Gray */
+            --bg-dark: #34495E; /* Dark Gray */
+            --hover-color: #16A085; /* Brighter Teal */
         }
 
+        /* Global Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Arial', sans-serif;
         }
 
         body {
             background-color: var(--bg-light);
-            color: var(--text-light);
+            color: var(--primary);
             line-height: 1.6;
         }
 
+        /* Navbar */
         nav {
             background: var(--primary);
             color: var(--text-light);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 30px;
+            padding: 15px 50px;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
         nav .logo {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: bold;
+            color: var(--text-light);
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            gap: 20px;
+            gap: 30px;
         }
 
         nav ul li a {
             color: var(--text-light);
             text-decoration: none;
+            font-size: 1rem;
             font-weight: 500;
+            transition: color 0.3s;
         }
 
         nav ul li a:hover {
-            color: var(--secondary);
+            color: var(--hover-color);
         }
 
+        /* Header Section */
         header {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: var(--text-light);
             text-align: center;
-            padding: 80px 20px;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
+            padding: 20px;
         }
 
         header h1 {
@@ -81,43 +88,32 @@
         }
 
         header p {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-bottom: 20px;
-            max-width: 700px;
-            margin: 0 auto;
+            max-width: 600px;
+            line-height: 1.5;
         }
 
-        header .contact-icons {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
+        header .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid var(--hover-color);
+            margin-bottom: 20px;
         }
 
-        header .contact-icons a {
+        .contact-icons a {
             color: var(--text-light);
-            font-size: 1.8rem;
+            font-size: 1.5rem;
+            margin: 0 10px;
             transition: color 0.3s;
         }
 
-        header .contact-icons a:hover {
-            color: var(--accent);
+        .contact-icons a:hover {
+            color: var(--hover-color);
         }
 
-        header .profile-img-container {
-            flex: 0.4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        header .profile-img-container img {
-            width: 230px;
-            height: 230px;
-            border-radius: 50%;
-            border: 5px solid #fff;
-        }
-
+        /* Section Styling */
         section {
             padding: 60px 20px;
             background-color: var(--bg-light);
@@ -125,34 +121,28 @@
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             color: var(--primary);
             margin-bottom: 40px;
-            position: relative;
         }
 
         .section-title::after {
             content: '';
             display: block;
-            width: 100px;
+            width: 80px;
             height: 3px;
             background: var(--secondary);
             margin: 10px auto;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
         .card {
             background: var(--bg-dark);
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             padding: 20px;
-            transition: transform 0.2s;
             color: var(--text-light);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            margin-bottom: 20px;
         }
 
         .card:hover {
@@ -160,14 +150,14 @@
             background: var(--primary);
         }
 
+        /* Footer */
         footer {
             text-align: center;
             background: var(--primary);
             color: var(--text-light);
-            padding: 20px;
+            padding: 15px;
             margin-top: 40px;
         }
-
     </style>
 </head>
 <body>
@@ -183,104 +173,29 @@
         </ul>
     </nav>
 
-    <!-- Header -->
-   <!-- Header -->
-<header id="about" style="height: 100vh; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; background: linear-gradient(135deg, #2C3E50, #1ABC9C); color: #ECF0F1;">
-    <div style="flex: 1; text-align: left;" data-aos="fade-down">
-        <h1>Hello,</h1>
-        <h1>I'm Rashmitha Padmashetti</h1>
-        <p>I am a Passionate Data Analyst & Machine Learning Enthusiast. I transform complex data into meaningful insights that empower informed decision-making and inspire innovation. By harnessing the power of algorithms, I analyze trends and predict future outcomes, enabling smarter, data-driven decisions for impactful results.</p>
-        <div class="contact-icons" data-aos="fade-up">
+    <!-- Header Section -->
+    <header id="about">
+        <img src="C:\Users\saikr\Downloads\Profile.JPG" alt="Profile Picture" class="profile-img" />
+        <h1>Rashmitha Padmashetti</h1>
+        <p>Passionate Data Analyst & Machine Learning Enthusiast transforming complex data into actionable insights for smarter decisions.</p>
+        <div class="contact-icons">
             <a href="tel:+13305524975" title="Call"><i class="fas fa-phone"></i></a>
             <a href="mailto:rashmithapadmashetti1819@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
             <a href="https://www.linkedin.com/in/rashmithapadmashetti/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/Rashmitha23?tab=repositories" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/Rashmitha23" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
         </div>
-    </div>
+    </header>
 
-    <!-- Profile Picture -->
-    <div style="flex: 0.4; display: flex; justify-content: center; align-items: center;">
-        <img src="C:\Users\saikr\Downloads\Profile.JPG" alt="Rashmitha Padmashetti" style="width: 250px; height: 250px; border-radius: 50%; border: 5px solid #fff;">
-    </div>
-</header>
-
-<!-- Education Section -->
-<section id="education">
-    <div class="container">
+    <!-- Education Section -->
+    <section id="education">
         <h2 class="section-title">Education</h2>
         <div class="card" data-aos="fade-right">
             <h3>Master of Computer Science</h3>
-            <p>Kent State University, GPA: 3.7/4.0 (Aug 2023 - May 2025)</p>
+            <p>Kent State University | GPA: 3.7/4.0</p>
         </div>
         <div class="card" data-aos="fade-left">
             <h3>Bachelor of Computer Science</h3>
-            <p>Sathyabama Institute of Science and Technology, GPA: 9.32/10.0 (Aug 2019 - May 2023)</p>
-        </div>
-    </div>
-</section>
-
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <div class="card" data-aos="zoom-in">
-                    <h3>Programming Languages</h3>
-                    <ul>
-                        <li>Python</li>
-                        <li>C</li>
-                        <li>Java</li>
-                        <li>HTML & CSS</li>
-                    </ul>
-                </div>
-                <div class="card" data-aos="zoom-in">
-                    <h3>Data Science</h3>
-                    <ul>
-                        <li>Data Visualization</li>
-                        <li>Predictive Modeling</li>
-                        <li>EDA</li>
-                    </ul>
-                </div>
-                <div class="card" data-aos="zoom-in">
-                    <h3>Frameworks</h3>
-                    <ul>
-                        <li>Flask</li>
-                        <li>Django</li>
-                        <li>TensorFlow</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="card" data-aos="fade-right">
-                <h3>Machine Learning Intern</h3>
-                <p>HCL, Jan 2022 - May 2022</p>
-                <ul>
-                    <li>Developed a Crop Yield Prediction Tool.</li>
-                    <li>Integrated Flask-based interfaces for user accessibility.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="card" data-aos="fade-up">
-                <h3>Air Quality Prediction</h3>
-                <p>Machine learning algorithms with Flask for real-time insights.</p>
-            </div>
-            <div class="card" data-aos="fade-up">
-                <h3>eCommerce Dashboard</h3>
-                <p>Interactive dashboard showcasing product performance insights.</p>
-            </div>
+            <p>Sathyabama Institute of Science and Technology | GPA: 9.32/10.0</p>
         </div>
     </section>
 
@@ -290,7 +205,10 @@
     </footer>
 
     <script>
-        AOS.init({ duration: 800, offset: 100 });
+        AOS.init({
+            duration: 800,
+            offset: 100,
+        });
     </script>
 </body>
 </html>
