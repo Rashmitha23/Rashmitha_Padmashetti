@@ -353,6 +353,9 @@ product discount levels. I used Power query to clean the data and Excel to visua
             <div class="timeline-item" data-aos="fade-right">
                 <div class="timeline-date">Jan 2022 - May 2022</div>
                 <div class="timeline-content">
+                    <div class="timeline-icon">
+                        <img src="https://via.placeholder.com/80" alt="HCL Logo">
+                    </div>
                     <h3>Machine Learning Intern</h3>
                     <p>HCL</p>
                     <ul>
@@ -366,6 +369,9 @@ product discount levels. I used Power query to clean the data and Excel to visua
             <div class="timeline-item" data-aos="fade-left">
                 <div class="timeline-date">Aug 2023 - May 2025</div>
                 <div class="timeline-content">
+                    <div class="timeline-icon">
+                        <img src="https://via.placeholder.com/80" alt="Kent State University Logo">
+                    </div>
                     <h3>Master of Computer Science</h3>
                     <p>Kent State University</p>
                     <p>GPA: 3.7/4.0</p>
@@ -376,6 +382,9 @@ product discount levels. I used Power query to clean the data and Excel to visua
             <div class="timeline-item" data-aos="fade-right">
                 <div class="timeline-date">Aug 2019 - May 2023</div>
                 <div class="timeline-content">
+                    <div class="timeline-icon">
+                        <img src="https://via.placeholder.com/80" alt="Sathyabama Logo">
+                    </div>
                     <h3>Bachelor of Computer Science</h3>
                     <p>Sathyabama Institute of Science and Technology</p>
                     <p>GPA: 9.32/10.0</p>
@@ -440,10 +449,15 @@ product discount levels. I used Power query to clean the data and Excel to visua
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .timeline-content h3 {
-        margin-top: 0;
+        margin-top: 10px;
         color: #fff;
     }
 
@@ -456,12 +470,34 @@ product discount levels. I used Power query to clean the data and Excel to visua
         padding-left: 20px;
         margin: 0;
         color: #fff;
+        text-align: left;
+    }
+
+    /* Icon Styling */
+    .timeline-icon {
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .timeline-icon img {
+        width: 70%;
+        height: auto;
     }
 
     /* Alternating Left/Right Content */
     .timeline-item:nth-child(even) .timeline-content {
         order: -1;
-        text-align: left;
+        text-align: center;
     }
 
     /* Responsive for Small Screens */
@@ -478,6 +514,10 @@ product discount levels. I used Power query to clean the data and Excel to visua
         .timeline-date {
             text-align: left;
             margin-bottom: 10px;
+        }
+        .timeline-icon {
+            left: 20px;
+            transform: none;
         }
     }
 </style>
