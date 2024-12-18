@@ -464,13 +464,11 @@ product discount levels. I used Power query to clean the data and Excel to visua
 
     /* Alternate Left and Right */
     .timeline-item:nth-child(odd) .timeline-content {
+        order: -1;
         text-align: right;
     }
 
-    .timeline-item:nth-child(even) .timeline-content {
-        text-align: left;
-    }
-
+    
     /* Responsive Styling */
     @media (max-width: 768px) {
         .timeline::before {
