@@ -343,19 +343,16 @@ product discount levels. I used Power query to clean the data and Excel to visua
             
         </div>
     </div>
-<!-- Journey Section -->
 <section id="journey">
     <div class="container">
         <h2 class="section-title">Journey</h2>
         <div class="timeline">
-            <!-- Timeline Item 1 -->
+            <!-- Experience 1 -->
             <div class="timeline-item" data-aos="fade-right">
-                <div class="timeline-icon">
-                    <img src="https://via.placeholder.com/60" alt="HCL Logo">
-                </div>
+                <div class="timeline-date">Jan 2022 - May 2022</div>
                 <div class="timeline-content">
                     <h3>Machine Learning Intern</h3>
-                    <p>HCL | Jan 2022 - May 2022</p>
+                    <p>HCL</p>
                     <ul>
                         <li>Developed a Crop Yield Prediction Tool.</li>
                         <li>Integrated Flask-based interfaces for user accessibility.</li>
@@ -363,26 +360,22 @@ product discount levels. I used Power query to clean the data and Excel to visua
                 </div>
             </div>
 
-            <!-- Timeline Item 2 -->
+            <!-- Education 1 -->
             <div class="timeline-item" data-aos="fade-left">
-                <div class="timeline-icon">
-                    <img src="https://via.placeholder.com/60" alt="Kent State Logo">
-                </div>
+                <div class="timeline-date">Aug 2023 - May 2025</div>
                 <div class="timeline-content">
                     <h3>Master of Computer Science</h3>
-                    <p>Kent State University | Aug 2023 - May 2025</p>
+                    <p>Kent State University</p>
                     <p>GPA: 3.7/4.0</p>
                 </div>
             </div>
 
-            <!-- Timeline Item 3 -->
+            <!-- Education 2 -->
             <div class="timeline-item" data-aos="fade-right">
-                <div class="timeline-icon">
-                    <img src="https://via.placeholder.com/60" alt="Sathyabama Logo">
-                </div>
+                <div class="timeline-date">Aug 2019 - May 2023</div>
                 <div class="timeline-content">
                     <h3>Bachelor of Computer Science</h3>
-                    <p>Sathyabama Institute of Science and Technology | Aug 2019 - May 2023</p>
+                    <p>Sathyabama Institute of Science and Technology</p>
                     <p>GPA: 9.32/10.0</p>
                 </div>
             </div>
@@ -396,7 +389,6 @@ product discount levels. I used Power query to clean the data and Excel to visua
     #journey {
         padding: 60px 20px;
         background-color: #00001a;
-        color: #fff;
     }
     .section-title {
         text-align: center;
@@ -404,15 +396,15 @@ product discount levels. I used Power query to clean the data and Excel to visua
         margin-bottom: 40px;
         color: #fff;
     }
-
-    /* Timeline Styling */
     .timeline {
         position: relative;
         margin: 0 auto;
         max-width: 800px;
     }
+
+    /* Vertical Line */
     .timeline::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 50%;
@@ -426,72 +418,67 @@ product discount levels. I used Power query to clean the data and Excel to visua
     .timeline-item {
         position: relative;
         display: flex;
-        margin-bottom: 40px;
         justify-content: space-between;
-        align-items: center;
+        margin-bottom: 40px;
     }
 
-    /* Timeline Icon */
-    .timeline-icon {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60px;
-        height: 60px;
-        background-color: #fff;
-        border: 4px solid #4DA8DA;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
+    /* Date on Timeline */
+    .timeline-date {
+        flex: 1;
+        text-align: center;
+        font-weight: bold;
+        color: #4DA8DA;
+        margin-top: 10px;
     }
 
-    .timeline-icon img {
-        width: 70%;
-        height: auto;
-        border-radius: 50%;
-    }
-
-    /* Timeline Content */
+    /* Content Box */
     .timeline-content {
-        width: 40%;
+        flex: 2;
         background-color: #101827;
         padding: 20px;
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    /* Alternate Left and Right */
-    .timeline-item:nth-child(odd) .timeline-content {
-        order: -1;
-        text-align: right;
+    .timeline-content h3 {
+        margin-top: 0;
+        color: #fff;
     }
 
-    
-    /* Responsive Styling */
+    .timeline-content p {
+        margin: 5px 0;
+        color: #fff;
+    }
+
+    .timeline-content ul {
+        padding-left: 20px;
+        margin: 0;
+        color: #fff;
+    }
+
+    /* Alternating Left/Right Content */
+    .timeline-item:nth-child(even) .timeline-content {
+        order: -1;
+        text-align: left;
+    }
+
+    /* Responsive for Small Screens */
     @media (max-width: 768px) {
         .timeline::before {
             left: 20px;
         }
         .timeline-item {
             flex-direction: column;
-            align-items: flex-start;
         }
-        .timeline-icon {
-            left: 0;
-            transform: none;
-        }
-        .timeline-content {
-            width: 100%;
-            margin-left: 60px;
-        }
-        .timeline-item:nth-child(odd) .timeline-content,
         .timeline-item:nth-child(even) .timeline-content {
+            order: initial;
+        }
+        .timeline-date {
             text-align: left;
+            margin-bottom: 10px;
         }
     }
-</style>
+</style> 
 
 
 
