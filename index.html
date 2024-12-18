@@ -283,7 +283,7 @@ product discount levels. I used Power query to clean the data and Excel to visua
             <div class="card" data-aos="fade-up" style="text-align: center;">
                 <img src="images/Concrete.jpg" alt="Crop Yield Prediction" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
                 <h3 style="margin: 10px 0;">Concrete Strength Prediction Using PowerBI Tool.</h3>
-                <p>Designed a dashboard using Power Bl to analyze factors affecting concrete compressive strength by exploring relationships with cement, age, water, fine and coarse aggregate, and other materials. 
+                <p>Designed a Power Bl dashboard to analyze factors affecting concrete compressive strength by exploring relationships with cement, age, water, fine and coarse aggregate, and other materials. 
                     The dashboard identifies optimal conditions to maximize concrete strength, such as lower water content and specific fly ash thresholds. This data-driven approach aids in understanding concrete behaviour, supporting efficient material use in construction while achieving desired strength outcomes.</p>
           
                <div class="skills-tags" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 10px 0;">
@@ -334,6 +334,7 @@ product discount levels. I used Power query to clean the data and Excel to visua
     <span style="background-color: #4DA8DA; color: #fff; padding: 5px 10px; border-radius: 15px; font-size: 0.9rem;">Pandas</span>
                     <span style="background-color: #4DA8DA; color: #fff; padding: 5px 10px; border-radius: 15px; font-size: 0.9rem;">Seaborn</span>
     <span style="background-color: #4DA8DA; color: #fff; padding: 5px 10px; border-radius: 15px; font-size: 0.9rem;">Machine Learning</span>
+               </div>
 
                 <a href="https://github.com/Rashmitha23/HCL-Mini-Project" target="_blank" style="text-decoration: none; color: #4DA8DA; font-weight: bold;">
                     <i class="fab fa-github"></i> View Project
@@ -343,23 +344,148 @@ product discount levels. I used Power query to clean the data and Excel to visua
         </div>
     </div>
 </section>
-
-
-    
-<!-- Education Section -->
-<section id="education">
+<!-- Journey Section -->
+<section id="journey">
     <div class="container">
-        <h2 class="section-title">Education</h2>
-        <div class="card" data-aos="fade-right">
-            <h3>Master of Computer Science</h3>
-            <p>Kent State University, GPA: 3.7/4.0 (Aug 2023 - May 2025)</p>
-        </div>
-        <div class="card" data-aos="fade-left">
-            <h3>Bachelor of Computer Science</h3>
-            <p>Sathyabama Institute of Science and Technology, GPA: 9.32/10.0 (Aug 2019 - May 2023)</p>
+        <h2 class="section-title">Journey</h2>
+        <div class="timeline">
+            <!-- Experience 1 -->
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-date">Jan 2022 - May 2022</div>
+                <div class="timeline-content">
+                    <h3>Machine Learning Intern</h3>
+                    <p>HCL</p>
+                    <ul>
+                        <li>Developed a Crop Yield Prediction Tool.</li>
+                        <li>Integrated Flask-based interfaces for user accessibility.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Education 1 -->
+            <div class="timeline-item" data-aos="fade-left">
+                <div class="timeline-date">Aug 2023 - May 2025</div>
+                <div class="timeline-content">
+                    <h3>Master of Computer Science</h3>
+                    <p>Kent State University</p>
+                    <p>GPA: 3.7/4.0</p>
+                </div>
+            </div>
+
+            <!-- Education 2 -->
+            <div class="timeline-item" data-aos="fade-right">
+                <div class="timeline-date">Aug 2019 - May 2023</div>
+                <div class="timeline-content">
+                    <h3>Bachelor of Computer Science</h3>
+                    <p>Sathyabama Institute of Science and Technology</p>
+                    <p>GPA: 9.32/10.0</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
+<!-- CSS for Journey Section -->
+<style>
+    /* General Section Styling */
+    #journey {
+        padding: 60px 20px;
+        background-color: #f9f9f9;
+    }
+    .section-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 40px;
+        color: #333;
+    }
+    .timeline {
+        position: relative;
+        margin: 0 auto;
+        max-width: 800px;
+    }
+
+    /* Vertical Line */
+    .timeline::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 4px;
+        height: 100%;
+        background-color: #4DA8DA;
+        transform: translateX(-50%);
+    }
+
+    /* Timeline Item */
+    .timeline-item {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    /* Date on Timeline */
+    .timeline-date {
+        flex: 1;
+        text-align: center;
+        font-weight: bold;
+        color: #4DA8DA;
+        margin-top: 10px;
+    }
+
+    /* Content Box */
+    .timeline-content {
+        flex: 2;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .timeline-content h3 {
+        margin-top: 0;
+        color: #333;
+    }
+
+    .timeline-content p {
+        margin: 5px 0;
+        color: #555;
+    }
+
+    .timeline-content ul {
+        padding-left: 20px;
+        margin: 0;
+        color: #555;
+    }
+
+    /* Alternating Left/Right Content */
+    .timeline-item:nth-child(even) .timeline-content {
+        order: -1;
+        text-align: left;
+    }
+
+    /* Responsive for Small Screens */
+    @media (max-width: 768px) {
+        .timeline::before {
+            left: 20px;
+        }
+        .timeline-item {
+            flex-direction: column;
+        }
+        .timeline-item:nth-child(even) .timeline-content {
+            order: initial;
+        }
+        .timeline-date {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+    }
+</style>
+
+
+
+    
+
 
 <section id="skills">
     <div class="container">
@@ -426,20 +552,7 @@ product discount levels. I used Power query to clean the data and Excel to visua
 
 
 
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="card" data-aos="fade-right">
-                <h3>Machine Learning Intern</h3>
-                <p>HCL, Jan 2022 - May 2022</p>
-                <ul>
-                    <li>Developed a Crop Yield Prediction Tool.</li>
-                    <li>Integrated Flask-based interfaces for user accessibility.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+    
 
 
     <!-- Footer -->
