@@ -348,13 +348,12 @@ product discount levels. I used Power query to clean the data and Excel to visua
     <div class="container">
         <h2 class="section-title">Journey</h2>
         <div class="timeline">
-
             <!-- Timeline Item 1 -->
-            <div class="timeline-item">
+            <div class="timeline-item" data-aos="fade-right">
                 <div class="timeline-icon">
-                    <img src="path-to-your-hcl-logo.png" alt="HCL Logo">
+                    <img src="https://via.placeholder.com/60" alt="HCL Logo">
                 </div>
-                <div class="timeline-content left">
+                <div class="timeline-content">
                     <h3>Machine Learning Intern</h3>
                     <p>HCL | Jan 2022 - May 2022</p>
                     <ul>
@@ -365,11 +364,11 @@ product discount levels. I used Power query to clean the data and Excel to visua
             </div>
 
             <!-- Timeline Item 2 -->
-            <div class="timeline-item">
+            <div class="timeline-item" data-aos="fade-left">
                 <div class="timeline-icon">
-                    <img src="path-to-your-kent-logo.png" alt="Kent State Logo">
+                    <img src="https://via.placeholder.com/60" alt="Kent State Logo">
                 </div>
-                <div class="timeline-content right">
+                <div class="timeline-content">
                     <h3>Master of Computer Science</h3>
                     <p>Kent State University | Aug 2023 - May 2025</p>
                     <p>GPA: 3.7/4.0</p>
@@ -377,11 +376,11 @@ product discount levels. I used Power query to clean the data and Excel to visua
             </div>
 
             <!-- Timeline Item 3 -->
-            <div class="timeline-item">
+            <div class="timeline-item" data-aos="fade-right">
                 <div class="timeline-icon">
-                    <img src="path-to-your-sathyabama-logo.png" alt="Sathyabama Logo">
+                    <img src="https://via.placeholder.com/60" alt="Sathyabama Logo">
                 </div>
-                <div class="timeline-content left">
+                <div class="timeline-content">
                     <h3>Bachelor of Computer Science</h3>
                     <p>Sathyabama Institute of Science and Technology | Aug 2019 - May 2023</p>
                     <p>GPA: 9.32/10.0</p>
@@ -401,8 +400,9 @@ product discount levels. I used Power query to clean the data and Excel to visua
     }
     .section-title {
         text-align: center;
-        font-size: 2.5rem;
+        font-size: 2rem;
         margin-bottom: 40px;
+        color: #fff;
     }
 
     /* Timeline Styling */
@@ -411,10 +411,8 @@ product discount levels. I used Power query to clean the data and Excel to visua
         margin: 0 auto;
         max-width: 800px;
     }
-
-    /* Central Vertical Line */
     .timeline::before {
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         left: 50%;
@@ -428,8 +426,8 @@ product discount levels. I used Power query to clean the data and Excel to visua
     .timeline-item {
         position: relative;
         display: flex;
-        justify-content: space-between;
         margin-bottom: 40px;
+        justify-content: space-between;
         align-items: center;
     }
 
@@ -457,23 +455,23 @@ product discount levels. I used Power query to clean the data and Excel to visua
 
     /* Timeline Content */
     .timeline-content {
-        width: 45%;
+        width: 40%;
         background-color: #101827;
         padding: 20px;
         border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    /* Left/Right Alignment */
-    .timeline-content.left {
+    /* Alternate Left and Right */
+    .timeline-item:nth-child(odd) .timeline-content {
         text-align: right;
     }
 
-    .timeline-content.right {
+    .timeline-item:nth-child(even) .timeline-content {
         text-align: left;
     }
 
-    /* Responsive Layout */
+    /* Responsive Styling */
     @media (max-width: 768px) {
         .timeline::before {
             left: 20px;
@@ -490,12 +488,14 @@ product discount levels. I used Power query to clean the data and Excel to visua
             width: 100%;
             margin-left: 60px;
         }
-        .timeline-content.left, 
-        .timeline-content.right {
+        .timeline-item:nth-child(odd) .timeline-content,
+        .timeline-item:nth-child(even) .timeline-content {
             text-align: left;
         }
     }
 </style>
+
+
 
 
 
