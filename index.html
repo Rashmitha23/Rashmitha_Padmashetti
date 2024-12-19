@@ -173,6 +173,42 @@
             padding: 20px;
             margin-top: 40px;
         }
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background: var(--primary);
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav .hamburger {
+                display: block;
+            }
+
+            header {
+                height: auto;
+                padding: 20px;
+                flex-direction: column;
+            }
+
+            header .text-container h1 {
+                font-size: 1.8rem;
+            }
+
+            header img {
+                width: 200px;
+                height: 200px;
+                margin-top: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -690,8 +726,11 @@ product discount levels. I used Power query to clean the data and Excel to visua
 </footer>
 
 <script>
-    AOS.init({ duration: 800, offset: 100 });
-</script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav ul');
+            nav.classList.toggle('active');
+        }
+    </script>
 
 </body>
 </html>
