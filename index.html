@@ -369,24 +369,28 @@ product discount levels. I used Power query to clean the data and Excel to visua
                 </div>
             </div>
             
-            <!-- Experience 1 -->
             <div class="timeline-item" data-aos="fade-right">
-                <div class="timeline-date">Jan 2022 - May 2022</div>
-                <div class="timeline-content">
-                     <div class="university-header">
-                <img src="images/HCL.jpeg" alt="Sathyabama Logo" class="university-logo">
-                        <h3>HCL</h3>
-                        
-                     </div>
-                    <p>Machine Learning Intern</p>
-                    <ul>
-                        <li>Developed and implemented advanced Predictive models with Python, achieving high prediction accuracy and enhancing decision-making processes. Tools/Techniques: Python, Predictive Modeling, Statistical Analysis</li>
-                        <li>Engineered efficient ETL pipelines for large-scale datasets, streamlining data preprocessing workflows to improve model performance and scalability.
-Tools/Techniques: ETL Pipelines, Data Preprocessing, Python</li>
-                        <li>Created an interactive dashboard with PowerBI, delivering actionable insights to stakeholders and enabling data-driven decisions for better outcomes.Tools/Techniques: PowerBI, Data Visualization, Dashboard Development</li>
-                    </ul>
-                </div>
-            </div>
+    <div class="timeline-date">Jan 2022 - May 2022</div>
+    <div class="timeline-content">
+        <div class="university-header">
+            <img src="images/HCL.jpeg" alt="Sathyabama Logo" class="university-logo">
+            <h3>HCL</h3>
+        </div>
+        <p>Machine Learning Intern</p>
+        <ul>
+            <li>Engineered efficient ETL pipelines for large-scale datasets, streamlining data preprocessing workflows to improve model performance and scalability. 
+                <span class="tools-techniques">Tools/Techniques:</span> ETL Pipelines, Data Preprocessing, Python
+            </li>
+            <li>Developed Machine Learning models with Python, achieving high prediction accuracy and enhancing decision-making processes. 
+                <span class="tools-techniques">Tools/Techniques:</span> Python, Predictive Modeling, Statistical Analysis
+            </li>
+            <li>Created an interactive dashboard with PowerBI, delivering actionable insights to stakeholders and enabling data-driven decisions for better outcomes.
+                <span class="tools-techniques">Tools/Techniques:</span> PowerBI, Data Visualization, Dashboard Development
+            </li>
+        </ul>
+    </div>
+</div>
+
 
             <!-- Education 1 -->
             <div class="timeline-item" data-aos="fade-right">
@@ -489,6 +493,18 @@ Tools/Techniques: ETL Pipelines, Data Preprocessing, Python</li>
         margin-top: 0;
         color: #fff;
     }
+    /* Decrease font size for list items */
+.timeline-item ul li {
+    font-size: 14px; /* Adjust as needed */
+    line-height: 1.6;
+}
+
+/* Style the "Tools/Techniques" part */
+.tools-techniques {
+    font-weight: bold;
+    color: #FF6600; /* You can choose a color that matches your website's style */
+}
+
 
     .timeline-content p {
         margin: 5px 0;
